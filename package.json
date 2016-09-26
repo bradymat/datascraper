@@ -1,0 +1,23 @@
+{
+  "name": "datascraper",
+  "version": "1.0.0",
+  "description": "Scraps data from websites without apis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bradymat/datascraper.git"
+  },
+  "author": "Brady Gillies",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bradymat/datascraper/issues"
+  },
+  "homepage": "https://github.com/bradymat/datascraper#readme",
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "request": "^2.75.0"
+  }
+}
