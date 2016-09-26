@@ -4,9 +4,9 @@
   "description": "Scraps data from websites without apis",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "set": "node yugiohSets.js",
-    "deck": "node yugiohDecks.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deck": "node yugiohDecks.js"
   },
   "repository": {
     "type": "git",
