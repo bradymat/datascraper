@@ -121,23 +121,24 @@ urls = [
     'http://yugioh.wikia.com/wiki/Set_Card_Galleries:Phantom_Darkness_(TCG-EN-1E)',
     'http://yugioh.wikia.com/wiki/Set_Card_Galleries:Light_of_Destruction_(TCG-EN-1E)' ]
 
-console.log(urls[0]);
+console.log('start')
     getCardLinks = function (count, urls){
-      request(`${urls[count]}`, function(err, resp, body){
+        console.log('Im the', + count + 'iteration');
+        request(`${urls[count]}`, function(err, resp, body){
         if(!err && resp.statusCode == 200){
           var $ = cheerio.load(body)
           // Pull Card Link
           $('a:nth-child(4)', `#gallery-${count}`).each(function(){
+            console.log('reuqest', count)
+
             var link = (`http://yugioh.wikia.com${this.attribs.href}`)
             cardLinks.push(link)
-
-            })
             console.log(cardLinks)
             console.log(cardLinks.length)
+            })
           }
         })
       }
-
-for (var i = 0; i < 119; i++) {
-  getCardLinks(i, urls)
+for (var count = 0; count <= urls.length; count++) {
+  getCardLinks(count, urls)
 }
